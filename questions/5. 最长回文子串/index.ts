@@ -41,7 +41,7 @@ const longestPalindrome = (s: string): string => {
 const data = [
   { input: 'babad', expect: 'bab' },
   { input: 'cbbd', expect: 'bb' },
-  { input: 'bb', expect: 'bb' },
+  { input: 'bb', expect: 'bb' }
 ];
 
 printDemo(longestPalindrome, data);
