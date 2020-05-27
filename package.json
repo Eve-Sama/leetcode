@@ -1,0 +1,14 @@
+{
+  "name": "coding",
+  "version": "1.0.0",
+  "description": "A template to practice test of LeetCode",
+  "main": "index.js",
+  "author": "Eve",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^14.0.5",
+    "ts-node": "~8.3.0",
+    "tslint": "~5.19.0",
+    "typescript": "~3.8.3"
+  }
+}
