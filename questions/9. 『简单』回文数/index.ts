@@ -47,3 +47,5 @@ const data = [
 ];
 
 printDemo(isPalindrome, data);
+
+export {};

@@ -26,3 +26,5 @@ const data = [
 ];
 
 printDemo(twoSum, data);
+
+export {};

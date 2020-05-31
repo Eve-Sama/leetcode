@@ -40,3 +40,5 @@ const data = [
 ];
 
 printDemo(lengthOfLongestSubstring, data);
+
+export {};

@@ -118,3 +118,5 @@ const data = [
 ];
 
 printDemo(myAtoi, data);
+
+export {};

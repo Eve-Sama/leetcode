@@ -41,3 +41,5 @@ const data = [
 ];
 
 printDemo(reverse, data);
+
+export {};

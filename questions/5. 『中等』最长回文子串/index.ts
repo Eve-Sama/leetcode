@@ -45,3 +45,5 @@ const data = [
 ];
 
 printDemo(longestPalindrome, data);
+
+export {};
