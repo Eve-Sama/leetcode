@@ -20,9 +20,9 @@ const twoSum = (nums: number[], target: number): number[] => {
 };
 
 const data = [
-  { input: [0, 4, 3, 0], expect: 0 },
-  { input: [3, 2, 4], expect: 6 },
-  { input: [2, 7, 11, 15], expect: 9 }
+  { input: [[0, 4, 3, 0], 0], expect: [0, 3] },
+  { input: [[3, 2, 4], 6], expect: [1, 2] },
+  { input: [[2, 7, 11, 15], 9], expect: [0, 1] }
 ];
 
 printDemo(twoSum, data);

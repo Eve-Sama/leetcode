@@ -39,11 +39,11 @@ const isPalindrome = (x: number): boolean => {
 };
 
 const data = [
-  { input: 121, expect: true },
-  { input: -121, expect: false },
-  { input: 10, expect: false },
-  { input: 0, expect: true },
-  { input: 9999, expect: true }
+  { input: [121], expect: true },
+  { input: [-121], expect: false },
+  { input: [10], expect: false },
+  { input: [0], expect: true },
+  { input: [9999], expect: true }
 ];
 
 printDemo(isPalindrome, data);

@@ -34,10 +34,10 @@ const reverse = (x: number): number => {
 };
 
 const data = [
-  { input: 123, expect: 321 },
-  { input: -123, expect: -321 },
-  { input: 120, expect: 21 },
-  { input: 1534236469, expect: 0 }
+  { input: [123], expect: 321 },
+  { input: [-123], expect: -321 },
+  { input: [120], expect: 21 },
+  { input: [1534236469], expect: 0 }
 ];
 
 printDemo(reverse, data);

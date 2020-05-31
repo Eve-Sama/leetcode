@@ -1,7 +1,7 @@
 /** 输入参数的数据结构 */
 interface Data {
   // tslint:disable-next-line: no-any
-  input: any;
+  input: any[];
   // tslint:disable-next-line: no-any
   expect: any;
 }
@@ -17,20 +17,49 @@ interface PrintInfo {
   pass: '√' | '×';
 }
 
+/** 判断输出值是否与期望值一致 */
 // tslint:disable-next-line: no-any
-function _printDemo(func: (...params: any) => any, obj: Data[]): void {
+const isExpect = (output: any, expect: any): boolean => {
+  return JSON.stringify(output) === JSON.stringify(expect);
+};
+
+// tslint:disable-next-line: no-any
+const parseInput = (input: any[]): string => {
+  if (input.length === 0) {
+    return input[0];
+  }
+  let result = '';
+  input.forEach((value, index) => {
+    if (Array.isArray(value)) {
+      if (index !== 0) {
+        result += ', ';
+      }
+      result += `${JSON.stringify(value)}`;
+    } else {
+      if (index !== 0) {
+        result += ', ';
+      }
+      result += `${value}`;
+    }
+  });
+  result = `(${result})`;
+  return result;
+};
+
+// tslint:disable-next-line: no-any
+const _printDemo = (testFunction: (...params: any) => any, obj: Data[]): void => {
   const result: PrintInfo[] = obj.map((v) => {
     const { input, expect } = v;
-    const output = func(input);
+    const output = testFunction.apply(null, input);
     return {
-      input,
+      input: parseInput(input),
       output,
       expect,
-      pass: expect === output ? '√' : '×'
+      pass: isExpect(output, expect) ? '√' : '×'
     };
   });
   console.table(result);
-}
+};
 
 module.exports = {
   printDemo: _printDemo

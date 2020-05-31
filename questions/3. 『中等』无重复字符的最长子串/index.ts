@@ -32,11 +32,11 @@ const lengthOfLongestSubstring = (s: string): number => {
 };
 
 const data = [
-  { input: 'abcabcbb', expect: 3 },
-  { input: 'bbbbb', expect: 1 },
-  { input: 'pwwkew', expect: 3 },
-  { input: 'aab', expect: 2 },
-  { input: 'dvdf', expect: 3 }
+  { input: ['abcabcbb'], expect: 3 },
+  { input: ['bbbbb'], expect: 1 },
+  { input: ['pwwkew'], expect: 3 },
+  { input: ['aab'], expect: 2 },
+  { input: ['dvdf'], expect: 3 }
 ];
 
 printDemo(lengthOfLongestSubstring, data);

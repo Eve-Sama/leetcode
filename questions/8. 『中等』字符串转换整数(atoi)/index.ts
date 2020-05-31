@@ -103,18 +103,18 @@ const myAtoi = (str: string): number => {
 };
 
 const data = [
-  { input: '   -42', expect: -42 },
-  { input: '4193 with words', expect: 4193 },
-  { input: 'words and 987', expect: 0 },
-  { input: '-91283472332', expect: -2147483648 },
-  { input: '+', expect: 0 },
-  { input: '', expect: 0 },
-  { input: '+1', expect: 1 },
-  { input: '+-2', expect: 0 },
-  { input: '   +0 123', expect: 0 },
-  { input: '-   234', expect: 0 },
-  { input: '    -88827   5655  U', expect: -88827 },
-  { input: '-5-', expect: -5 }
+  { input: ['   -42'], expect: -42 },
+  { input: ['4193 with words'], expect: 4193 },
+  { input: ['words and 987'], expect: 0 },
+  { input: ['-91283472332'], expect: -2147483648 },
+  { input: ['+'], expect: 0 },
+  { input: [''], expect: 0 },
+  { input: ['+1'], expect: 1 },
+  { input: ['+-2'], expect: 0 },
+  { input: ['   +0 123'], expect: 0 },
+  { input: ['-   234'], expect: 0 },
+  { input: ['    -88827   5655  U'], expect: -88827 },
+  { input: ['-5-'], expect: -5 }
 ];
 
 printDemo(myAtoi, data);
