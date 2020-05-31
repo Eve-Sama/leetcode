@@ -50,6 +50,9 @@ const parseInput = (input: any[]): string => {
 const _printDemo = (testFunction: (...params: any) => any, obj: Data[]): void => {
   const result: PrintInfo[] = obj.map((v) => {
     const { input, expect } = v;
+    if (!Array.isArray(input)) {
+      throw new Error('Test input should be array!');
+    }
     const output = testFunction.apply(null, input);
     return {
       input: parseInput(input),

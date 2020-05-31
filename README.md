@@ -50,27 +50,25 @@ const myFunction = (value: number): boolean => {
 };
 
 // 测试用例, 仅需要包含 '输入' 和 '预期结果' 即可
+// 注意, input必须是数组, 实际测试的时候会解析内容再传参, 这是为了兼容多参数测试(arg1, arg2...)
 const data = [
-  { input: -1, expect: false },
-  { input: 0, expect: true },
-  { input: -0, expect: true },
-  { input: 1, expect: false },
-  { input: 2, expect: true }
+  { input: [-1], expect: false },
+  { input: [0], expect: true },
+  { input: [-0], expect: true },
+  { input: [1], expect: false },
+  { input: [2], expect: true }
 ];
 
 // 测试工具, 传入你写的 '解题函数' 和 '测试用例' 即可
 printDemo(myFunction, data);
-
 ```
 
 使用 **ts-node** 运行该文件观察控制台, 测试工具会根据你编写的解题函数和测试用例给出一份测试报告. 
 
-<!-- (https://file.qingflow.com/uploads/file/b5d85e36-50e9-4143-92cd-0aec7df1b422.png) -->
+![ts-node result](https://file.qingflow.com/uploads/file/24e3aece-3710-49ec-9f10-3a207f3c98e3.png)
 
-![ts-node result](https://file.qingflow.com/uploads/file/b5d85e36-50e9-4143-92cd-0aec7df1b422.png)
+怎么样? 是不是感觉挺花里胡哨的⭐? (虽然确实没什么卵用😥). 
 
-怎么样? 是不是感觉挺花里胡哨的⭐? (虽然确实没什么卵用😥). 目前测试用例仅能接受单个输入参数, 多参数目前暂不支持(因为我不知道该怎么实现😭). 
-
-在确保你的代码已通过全部测试用例时😁, 执行 **tsc** 即可看到根目录会产生一个 **submit** 文件夹, 在当中找到自己当前正在解题的 *JS* 文件提交测试即可. 
+在确保你的代码已通过全部测试用例时, 执行 **tsc** 即可看到根目录会产生一个 **submit** 文件夹, 在当中找到自己当前正在解题的 *JS* 文件提交测试即可. 
 
 通常在 *通过* 测试以后(或者因为超时等原因实在无法继续解答), 我会编写一个doc.md记录该题的信息、通过结果, 如果有必要会带上一些备注信息, 用于日后回溯. 
