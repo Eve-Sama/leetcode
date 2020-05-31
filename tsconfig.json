@@ -4,12 +4,7 @@
     "target": "es6",
     "outDir": "submit",
     "downlevelIteration": true,
-    "baseUrl": ".",
-    "paths": {
-      "@tool": [
-        "tool/console.ts"
-      ]
-    }
+    "baseUrl": "."
   },
   "include": ["./questions"],
   "exclude": ["node_modules"]
