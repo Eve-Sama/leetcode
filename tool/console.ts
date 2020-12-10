@@ -47,7 +47,7 @@ const parseInput = (input: any[]): string => {
 };
 
 // tslint:disable-next-line: no-any
-const _printDemo = (testFunction: (...params: any) => any, obj: Data[]): void => {
+const printDemo = (testFunction: (...params: any) => any, obj: Data[]): void => {
   const result: PrintInfo[] = obj.map((v) => {
     const { input, expect } = v;
     if (!Array.isArray(input)) {
@@ -64,6 +64,4 @@ const _printDemo = (testFunction: (...params: any) => any, obj: Data[]): void =>
   console.table(result);
 };
 
-module.exports = {
-  printDemo: _printDemo
-};
+export { printDemo };

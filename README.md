@@ -43,7 +43,7 @@ yarn
 - 执行 *ts-node* 观察控制台
 
 ```javascript
-const { printDemo } = require('../../tool/console.ts');
+import { printDemo } from '../../tool/console';
 
 const myFunction = (value: number): boolean => {
   return value % 2 === 0;

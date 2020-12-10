@@ -1,4 +1,4 @@
-const { printDemo } = require('../../tool/console.ts');
+import { printDemo } from '../../tool/console';
 
 /** 判断是否是回文 */
 function isHuiWen(value: string, _left: number, _right: number): boolean {

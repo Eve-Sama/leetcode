@@ -1,4 +1,4 @@
-const { printDemo } = require('../../tool/console.ts');
+import { printDemo } from '../../tool/console';
 
 /**
  * @param {string} s

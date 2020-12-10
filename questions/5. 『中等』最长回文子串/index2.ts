@@ -1,4 +1,4 @@
-const { printDemo } = require('../../tool/console.ts');
+import { printDemo } from '../../tool/console';
 
 /**
  * 计算以left和right为中心的回文长度是多少
