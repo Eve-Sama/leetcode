@@ -1,22 +1,13 @@
-class TreeNode {
-  val: number;
-  left: TreeNode | null;
-  right: TreeNode | null;
-  constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
-    this.val = val === undefined ? 0 : val;
-    this.left = left === undefined ? null : left;
-    this.right = right === undefined ? null : right;
-  }
-}
+import { TreeNode } from '../../tool/tree';
 
 const treeNode15 = new TreeNode(15, null, null);
 const treeNode7 = new TreeNode(7, null, null);
 const treeNode20 = new TreeNode(20, treeNode15, treeNode7);
 const treeNode9 = new TreeNode(9, null, null);
-const treeNode3 = new TreeNode(3, treeNode9, treeNode20);
+const treeNode = new TreeNode(3, treeNode9, treeNode20);
 
 function maxDepth(root: TreeNode | null): number {
-  if(Array.isArray(root) || root === null) {
+  if (Array.isArray(root) || root === null) {
     return 0;
   }
   let height = 0;
@@ -40,4 +31,4 @@ function maxDepth(root: TreeNode | null): number {
   return height;
 }
 
-console.log(maxDepth(treeNode3));
+console.log(maxDepth(treeNode));
