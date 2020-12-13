@@ -28,7 +28,6 @@ function pathSum(root: TreeNode, sum: number): number[][] {
     }
     path.push(tree);
     const pathValue = path.map(v => v.val);
-    const su = valid(pathValue, sum);
     if (valid(pathValue, sum) && !tree.left && !tree.right) {
       res.push(path.map(v => v.val));
     }
