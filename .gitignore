@@ -1,3 +1,4 @@
 node_modules/*
 submit/*
 yarn.lock
+yarn-error.log
