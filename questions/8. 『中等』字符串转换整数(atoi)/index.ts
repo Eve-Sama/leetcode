@@ -1,4 +1,4 @@
-import { printDemo } from '../../tool/console';
+import { test } from '../../tool/test';
 
 const ascii = {
   minus: 45,
@@ -117,6 +117,6 @@ const data = [
   { input: ['-5-'], expect: -5 }
 ];
 
-printDemo(myAtoi, data);
+test(myAtoi, data);
 
 export {};

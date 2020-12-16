@@ -1,4 +1,4 @@
-import { printDemo } from '../../tool/console';
+import { test } from '../../tool/test';
 
 /** 判断是否是回文 */
 function isHuiWen(value: string, _left: number, _right: number): boolean {
@@ -44,6 +44,6 @@ const data = [
   { input: ['bb'], expect: 'bb' }
 ];
 
-printDemo(longestPalindrome, data);
+test(longestPalindrome, data);
 
 export {};

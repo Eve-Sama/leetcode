@@ -1,4 +1,4 @@
-import { printDemo } from '../../tool/console';
+import { test } from '../../tool/test';
 
 const getFirstOne = (value: number): number => {
   let _value = value;
@@ -46,6 +46,6 @@ const data = [
   { input: [9999], expect: true }
 ];
 
-printDemo(isPalindrome, data);
+test(isPalindrome, data);
 
 export {};

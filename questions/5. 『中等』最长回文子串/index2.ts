@@ -1,4 +1,4 @@
-import { printDemo } from '../../tool/console';
+import { test } from '../../tool/test';
 
 /**
  * 计算以left和right为中心的回文长度是多少
@@ -53,6 +53,6 @@ const data = [
   { input: ['bb'], expect: 'bb' }
 ];
 
-printDemo(longestPalindrome, data);
+test(longestPalindrome, data);
 
 export {};

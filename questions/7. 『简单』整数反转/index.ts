@@ -1,4 +1,4 @@
-import { printDemo } from '../../tool/console';
+import { test } from '../../tool/test';
 
 /**
  * @param {number} x
@@ -40,6 +40,6 @@ const data = [
   { input: [1534236469], expect: 0 }
 ];
 
-printDemo(reverse, data);
+test(reverse, data);
 
 export {};

@@ -1,4 +1,4 @@
-import { printDemo } from '../../tool/console';
+import { test } from '../../tool/test';
 
 /**
  * @param {number[]} nums
@@ -25,6 +25,6 @@ const data = [
   { input: [[2, 7, 11, 15], 9], expect: [0, 1] }
 ];
 
-printDemo(twoSum, data);
+test(twoSum, data);
 
 export {};

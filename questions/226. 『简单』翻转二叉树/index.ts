@@ -1,5 +1,4 @@
 import { TreeNode } from '../../tool/tree';
-import { tree } from './config';
 
 function invertTree(root: TreeNode | null): TreeNode | null {
   if (!root) {
@@ -12,5 +11,3 @@ function invertTree(root: TreeNode | null): TreeNode | null {
   invertTree(root.right);
   return root;
 }
-
-console.log(invertTree(tree));

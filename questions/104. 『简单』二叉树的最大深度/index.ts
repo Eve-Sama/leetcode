@@ -1,12 +1,7 @@
 import { TreeNode } from '../../tool/tree';
 
-const treeNode15 = new TreeNode(15, null, null);
-const treeNode7 = new TreeNode(7, null, null);
-const treeNode20 = new TreeNode(20, treeNode15, treeNode7);
-const treeNode9 = new TreeNode(9, null, null);
-const treeNode = new TreeNode(3, treeNode9, treeNode20);
-
 function maxDepth(root: TreeNode | null): number {
+  console.log(root, `root`);
   if (Array.isArray(root) || root === null) {
     return 0;
   }
@@ -30,5 +25,3 @@ function maxDepth(root: TreeNode | null): number {
   }
   return height;
 }
-
-console.log(maxDepth(treeNode));

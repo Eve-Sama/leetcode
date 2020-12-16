@@ -1,5 +1,4 @@
 import { TreeNode } from '../../tool/tree';
-import { tree } from './config';
 
 function diameterOfBinaryTree(root: TreeNode | null, max: number = 0): number {
   if (!root || (Array.isArray(root) && !root.length)) return 0;
@@ -33,7 +32,3 @@ function getHeight(root: TreeNode | null): number {
   }
   return height;
 }
-
-console.log(diameterOfBinaryTree(tree));
-// console.log(tree);
-// console.log(getHeight(tree.left));

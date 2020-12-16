@@ -1,9 +1,8 @@
 import { TreeNode } from '../../tool/tree';
-import { treeNodeLevel_1_1 } from './config';
 
 // 使用栈
 function isSymmetric(root: TreeNode | null): boolean {
-  if (root === null || Array.isArray(root) && root.length === 0) return true;
+  if (root === null || (Array.isArray(root) && root.length === 0)) return true;
   const stack: TreeNode[] = [root];
   while (stack.length) {
     let length = stack.length;
@@ -34,4 +33,3 @@ function valid(stack: TreeNode[]): boolean {
   return true;
 }
 
-console.log(isSymmetric(treeNodeLevel_1_1));

@@ -1,4 +1,4 @@
-import { printDemo } from '../../tool/console';
+import { test } from '../../tool/test';
 
 /**
  * @param {string} s
@@ -39,6 +39,6 @@ const data = [
   { input: ['dvdf'], expect: 3 }
 ];
 
-printDemo(lengthOfLongestSubstring, data);
+test(lengthOfLongestSubstring, data);
 
 export {};

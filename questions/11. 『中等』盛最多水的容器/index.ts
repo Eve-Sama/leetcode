@@ -1,4 +1,4 @@
-import { printDemo } from '../../tool/console';
+import { test } from '../../tool/test';
 
 /**
  * @param {number} x
@@ -26,6 +26,6 @@ const data = [
   { input: [[1, 1]], expect: 1 }
 ];
 
-printDemo(maxArea, data);
+test(maxArea, data);
 
 export {};
