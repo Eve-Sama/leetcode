@@ -7,8 +7,9 @@
 
 ## ✨ 特性
 
-- 允许你使用TypeScript编写函数, 转换成JavaScript之后再提交.
-- 封装了一个测试工具类, 允许你批量测试.
+- 使用TypeScript
+- 封装了一个测试函数, 允许你批量测试
+- 提供构造Tree的函数, 将数组转为二叉树
 
 
 ## 📦 安装
@@ -24,26 +25,23 @@ yarn
 
     |-- questions                 // 存放所有的问题
         |-- 1.『简单』两数之合     // 单个问题文件夹
-            |-- doc.md            // 问题的信息, 包括原题、提交结果等
             |-- index.ts          // 解题源码
         |-- ......
-    |-- submit                    // 运行 tsc 之后会产生的文件夹
-        |-- 1.『简单』两数之合     // 单个问题文件夹
-            |-- index.js          // 将ts编译为js的文件
     |-- tool                      // 工具包文件夹, 包含一些小demo(目前只有一个), 辅助Coding
-        |-- console.ts            // 包含printDemo函数, 用于批量测试结果
+        |-- test.ts               // 包含 test 函数, 用于批量测试结果
+        |-- tree.ts               // 二叉树相关的工具函数、类型声明等
 
 
 ## 🔨 实战
 
 举个例子, 假如算法题是 *实现一个判断偶数的函数* .
-- 先在 *questions* 文件夹下建立该问题的文件夹
-- 之后在该文件夹中新建 *index.ts* (文件名没有限制)
-- 引入测试工具包(printDemo), 编写测试用例
+- 在 *questions* 文件夹下建立该问题的文件夹
+- 在该文件夹中新建 *index.ts* (文件名没有限制)
+- 引入测试工具包(test), 编写测试用例
 - 执行 *ts-node* 观察控制台
 
 ```javascript
-import { printDemo } from '../../tool/console';
+import { test } from '../../tool/test';
 
 const myFunction = (value: number): boolean => {
   return value % 2 === 0;
@@ -60,15 +58,32 @@ const data = [
 ];
 
 // 测试工具, 传入你写的 '解题函数' 和 '测试用例' 即可
-printDemo(myFunction, data);
+test(myFunction, data);
 ```
 
 使用 **ts-node** 运行该文件观察控制台, 测试工具会根据你编写的解题函数和测试用例给出一份测试报告. 
 
 ![ts-node result](https://file.qingflow.com/uploads/file/24e3aece-3710-49ec-9f10-3a207f3c98e3.png)
 
-怎么样? 是不是感觉挺花里胡哨的⭐? (虽然确实没什么卵用😥). 
+怎么样? 是不是感觉挺花里胡哨的⭐ (虽然确实没什么卵用😥). 
 
-在确保你的代码已通过全部测试用例时, 执行 **tsc** 即可看到根目录会产生一个 **submit** 文件夹, 在当中找到自己当前正在解题的 *JS* 文件提交测试即可. 
+## 🌲二叉树
 
-通常在 *通过* 测试以后(或者因为超时等原因实在无法继续解答), 我会编写一个doc.md记录该题的信息、通过结果, 如果有必要会带上一些备注信息, 用于日后回溯. 
+对于二叉树相关的试题我们总是要构造一些二叉树的类, 而 LeetCode 的输入通常是用数组代替二叉树结构.
+
+![用数组代替二叉树结构](https://file.qingflow.com/uploads/file/c3a6f01b-618b-48e8-b5ba-3c5340d28b52.png)
+
+其实数组就是二叉树的层序遍历, LeetCode 官方给出了相应的解释. 
+
+![数组转二叉树](https://file.qingflow.com/uploads/file/6579e7d0-d908-443a-8b1a-bf3629c340b2.png)
+
+为了避免总是要根据给定的数组手动地去构造二叉树(创建一个 tree 对象, 手动地指定左子树为其他的 tree 对象). 写了个算法能够将数组自动转为二叉树. 
+
+``` typescript
+console.log(createTree([1, null, 2, 3]));
+```
+
+![数组转二叉树](https://file.qingflow.com/uploads/file/8975438c-ea58-4f74-8b6c-d32926b01a1c.png)
+
+
+有了 `createTree` 函数, 就可以快速将数组转为二叉树, 方便调试. 
